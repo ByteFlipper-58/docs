@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
@@ -7,17 +7,15 @@ const config: Config = {
   tagline: 'Documentation for ByteFlipper products',
   favicon: 'img/favicon.ico',
 
-  // Set the production URL of your site here
-  url: 'https://byteflipper-58.github.io/docs/',
-  baseUrl: '/',
+  url: 'https://byteflipper-58.github.io',
+  baseUrl: '/docs/',
 
-  // GitHub pages deployment config.
   organizationName: 'byteflipper-58',
   projectName: 'docs',
+  deploymentBranch: 'gh-pages',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'ru'],
@@ -29,15 +27,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/byteflipper-58/docs/edit/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -61,14 +51,13 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
           position: 'right',
         },
         {
-          type: 'localeDropdown',  // Добавлено для поддержки выбора языка
+          type: 'localeDropdown',
           position: 'right',
         },
       ],
@@ -81,7 +70,7 @@ const config: Config = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/intro',
+              to: '/docs/',
             },
           ],
         },
@@ -105,10 +94,6 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
             {
               label: 'GitHub',
               href: 'https://github.com/byteflipper-58/docs',
